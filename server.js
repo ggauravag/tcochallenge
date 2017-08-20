@@ -14,7 +14,7 @@ var port = process.env.PORT || 8080;        // set our port
 var router = express.Router();              // get an instance of the express Router
 
 // test route to make sure everything is working (accessed at GET http://localhost:8080/api)
-router.get('/', function(req, res) {
+router.get('/handle', function(req, res) {
     res.json({ handle: 'ggauravag' });
 });
 
@@ -22,7 +22,7 @@ router.get('/', function(req, res) {
 
 // REGISTER OUR ROUTES -------------------------------
 // all of our routes will be prefixed with /api
-app.use('/', router);
+app.use('/api', router);
 
 // START THE SERVER
 // =============================================================================
