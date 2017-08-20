@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome to App</title>
+</head>
+<body>
+    <button onclick="connectWithDigitalOcean()">Connect your Digital Ocean Account</button>
+
+<script>
+    function connectWithDigitalOcean() {
+        window.location.href = 'https://cloud.digitalocean.com/v1/oauth/authorize?client_id=61de28bfd1b5782f984fdda0fdcdd500b6908359c2c75eb53b064674fbb9a613&redirect_uri=http://139.59.0.169/api/oauth-handler&response_type=code';
+    }
+</script>
+</body>
+</html>
