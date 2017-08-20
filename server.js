@@ -1,6 +1,7 @@
 var express    = require('express');        // call express
 var app        = express();                 // define our app using express
 var bodyParser = require('body-parser');
+var controller = require('./app/controller')
 
 // configure app to use bodyParser()
 // this will let us get the data from a POST
@@ -14,9 +15,8 @@ var port = process.env.PORT || 8080;        // set our port
 var router = express.Router();              // get an instance of the express Router
 
 // test route to make sure everything is working (accessed at GET http://localhost:8080/api)
-router.get('/handle', function(req, res) {
-    res.json({ handle: 'ggauravag' });
-});
+router.get('/handle', controller.getHandleName);
+router.get('/droplet-details', controller.getDropletDetails);
 
 // more routes for our API will happen here
 
